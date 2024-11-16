@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouton 💩</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 2rem;
+            padding: 15px 30px;
+            background: #ff7675;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        button:hover {
+            background: #d63031;
+        }
+
+        button:active {
+            transform: scale(0.95);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #counter {
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #2d3436;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bouton 💩</h1>
+    <button id="cacaButton">💩 Caca</button>
+    <div id="counter">Compteur : 0</div>
+
+    <script>
+        let count = 0;
+
+        const button = document.getElementById("cacaButton");
+        const counter = document.getElementById("counter");
+
+        button.addEventListener("click", () => {
+            count++;
+            counter.textContent = `Compteur : ${count}`;
+        });
+    </script>
+</body>
+</html>
